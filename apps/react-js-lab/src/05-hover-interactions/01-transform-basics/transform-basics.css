@@ -1,0 +1,98 @@
+
+.transform-lab {
+  min-height: 100vh;
+  padding: 64px 24px;
+  background: #101010;
+  color: #f5f5f5;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.transform-lab__header {
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.transform-lab__eyebrow {
+  color: #b8f34a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.transform-lab__header h1 {
+  margin: 16px 0;
+  font-size: clamp(32px, 5vw, 56px);
+  letter-spacing: -2px;
+}
+
+.transform-lab__header > p:last-child {
+  color: #a3a3a3;
+  line-height: 1.7;
+}
+
+.transform-lab__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.transform-card {
+  min-height: 190px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  border: 1px solid #303030;
+  border-radius: 18px;
+  background: #1b1b1b;
+  cursor: default;
+  transform-origin: center;
+}
+
+.transform-card__number {
+  color: #b8f34a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.transform-card h2 {
+  margin: 0 0 8px;
+  font-size: 21px;
+}
+
+.transform-card p {
+  margin: 0;
+  color: #a3a3a3;
+  font-size: 14px;
+}
+
+.transform-card__arrow {
+  align-self: flex-end;
+  color: #b8f34a;
+  font-size: 24px;
+}
+
+@media (max-width: 700px) {
+  .transform-lab__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 440px) {
+  .transform-lab {
+    padding: 40px 16px;
+  }
+
+  .transform-lab__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transform-card {
+    transition: none;
+  }
+}
